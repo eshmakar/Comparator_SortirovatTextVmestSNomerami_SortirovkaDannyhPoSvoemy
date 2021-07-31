@@ -25,6 +25,26 @@ class Compar implements Comparator<String>{
     }
 }
 
+//ДРУГОЙ ВАРИАНТ №2
+//        List<String> list = Arrays.asList("24. one", "3. two", "256. three", "0. six", "5698. four", "1. five");
+//
+//        list.sort((o1, o2) ->
+//                Integer.parseInt(o2.replaceFirst("(\\d+)(\\. .*)", "$1")) -
+//                Integer.parseInt(o1.replaceFirst("(\\d+)(\\. .*)", "$1")));
+//        list.forEach(System.out::println);
+
+
+
+//ДРУГОЙ ВАРИАНТ №3
+//        Stream.of("24. one", "3. two", "256. three", "0. six", "5698. four", "1. five")
+//        .sorted(Comparator.comparingInt(Test::parse)).forEach(System.out::println);
+//    }
+//    public static int parse (String s){
+//        return -Integer.parseInt(s.replaceFirst("(\\d+)(\\. .*)", "$1"));
+//    }
+
+
+
 /*OUTPUT:
 5698. four
 256. three
